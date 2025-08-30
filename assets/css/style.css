@@ -1,0 +1,146 @@
+/* Custom CSS for Gagarjal Website */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* A more modern, clean font for headings */
+    color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Header & Navigation */
+.navbar-brand img {
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+}
+
+.navbar-nav .nav-link {
+    color: #333 !important; /* !important to override Bootstrap's default */
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #0d6efd !important; /* Primary blue for active/hover */
+}
+
+/* Hero Section (Home Page) */
+.hero-section {
+    /* Remember to add your background_water.jpg to assets/img/ */
+    background: linear-gradient(rgba(0, 123, 255, 0.4), rgba(0, 123, 255, 0.4)), url('../img/bgimg.png') no-repeat center center/cover;
+    min-height: 60vh; /* 60% of viewport height */
+    color: white;
+    position: relative;
+    /* Flexbox properties are handled by Bootstrap classes directly in HTML: d-flex, align-items-center, justify-content-center */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: white; /* Ensure heading is white */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p.lead {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-section .btn {
+    border-radius: 50px; /* Rounded buttons */
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary {
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    border-color: #0d6efd;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.hero-section .btn-outline-light {
+    color: white;
+    border-color: white;
+}
+.hero-section .btn-outline-light:hover {
+    background-color: white;
+    color: #0d6efd;
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+section {
+    padding: 60px 0; /* Consistent padding for sections */
+}
+
+/* Icons - already styled via Bootstrap text-primary, but fa-3x is Font Awesome's own size class */
+.fa-3x {
+    font-size: 3em;
+}
+.fa-4x {
+    font-size: 4em;
+}
+
+/* Products Page Cards (will add in Step 8) */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 180px; /* Standardize image height */
+    object-fit: contain; /* Prevent stretching */
+}
+
+/* Contact Form (will add in Step 9) */
+#contactForm .form-control {
+    border-radius: 5px;
+    border-color: #ced4da;
+}
+
+/* Footer (already in HTML, but these are for social icons) */
+footer .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #0d6efd; /* Hover effect for social icons */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p.lead {
+        font-size: 1.2rem;
+    }
+    .hero-section .btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        text-align: center;
+    }
+}
