@@ -1,25 +1,43 @@
 /* Custom CSS for Gagarjal Website */
+:root {
+    --gagarjal-orange-brown: #E89255;
+    --gagarjal-dark-teal-blue: #1E596D;
+    --gagarjal-light-blue: #8ECFF0;
+    --gagarjal-text-dark: #333333;
+    --gagarjal-bg-light: #f8f9fa;
+    --gagarjal-white: #FFFFFF;
+}
 
-/* General Styles */
+/* Global Page Styling */
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Set Poppins as primary font */
+    font-weight: 300; /* Lighter weight for body text */
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa; /* Light grey background */
+    color: var(--gagarjal-text-dark);
+    background-color: var(--gagarjal-bg-light); /* Very light gray background */
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* A more modern, clean font for headings */
-    color: #0d6efd; /* Bootstrap primary blue */
+    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
+    font-weight: 700; /* Bolder headings */
+    color: var(--gagarjal-dark-teal-blue);
+}
+
+.main-content-wrapper {
+    max-width: 1200px; /* Max width for main content container */
+    margin: 50px auto; /* Generous top/bottom margin, horizontally centered */
+    padding: 0 15px; /* Prevent content from touching edges on small screens */
 }
 
 /* Header & Navigation */
 .navbar-brand img {
-    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+    height: 60px;
+    max-width: 200px;
+    width: auto;
 }
 
 .navbar-nav .nav-link {
-    color: #333 !important; /* !important to override Bootstrap's default */
+    color: var(--gagarjal-dark-teal-blue) !important;
     font-weight: 500;
     margin-right: 15px;
     transition: color 0.3s ease;
@@ -27,22 +45,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #0d6efd !important; /* Primary blue for active/hover */
+    color: var(--gagarjal-orange-brown) !important;
 }
 
 /* Hero Section (Home Page) */
 .hero-section {
-    /* Remember to add your background_water.jpg to assets/img/ */
-    background: linear-gradient(rgba(0, 123, 255, 0.4), rgba(0, 123, 255, 0.4)), url('../img/bgimg.png') no-repeat center center/cover;
-    min-height: 60vh; /* 60% of viewport height */
-    color: white;
+    background: linear-gradient(rgba(30, 89, 109, 0.4), rgba(30, 89, 109, 0.4)), url('../img/bgimg.png') no-repeat center center/cover;
+    min-height: 60vh;
+    color: var(--gagarjal-white);
     position: relative;
-    /* Flexbox properties are handled by Bootstrap classes directly in HTML: d-flex, align-items-center, justify-content-center */
 }
 
 .hero-section h1 {
     font-size: 3.5rem;
-    color: white; /* Ensure heading is white */
+    color: var(--gagarjal-white);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -52,83 +68,515 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section .btn {
-    border-radius: 50px; /* Rounded buttons */
+    border-radius: 50px;
     padding: 10px 30px;
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
-.hero-section .btn-primary {
-    background-color: #0d6efd; /* Bootstrap primary blue */
-    border-color: #0d6efd;
+.hero-section .btn-primary-custom {
+    background-color: var(--gagarjal-orange-brown);
+    border-color: var(--gagarjal-orange-brown);
+    color: var(--gagarjal-white);
 }
 
-.hero-section .btn-primary:hover {
-    background-color: #0a58ca;
-    border-color: #0a58ca;
-    transform: translateY(-2px); /* Slight lift on hover */
+.hero-section .btn-primary-custom:hover {
+    background-color: #d17e47;
+    border-color: #d17e47;
+    transform: translateY(-2px);
 }
 
-.hero-section .btn-outline-light {
-    color: white;
-    border-color: white;
+.hero-section .btn-secondary-custom {
+    color: var(--gagarjal-dark-teal-blue);
+    border-color: var(--gagarjal-dark-teal-blue);
+    background-color: transparent;
 }
-.hero-section .btn-outline-light:hover {
-    background-color: white;
-    color: #0d6efd;
+.hero-section .btn-secondary-custom:hover {
+    background-color: var(--gagarjal-dark-teal-blue);
+    color: var(--gagarjal-white);
     transform: translateY(-2px);
 }
 
 /* Section Styles */
 section {
-    padding: 60px 0; /* Consistent padding for sections */
+    padding: 60px 0;
 }
 
-/* Icons - already styled via Bootstrap text-primary, but fa-3x is Font Awesome's own size class */
-.fa-3x {
-    font-size: 3em;
-}
-.fa-4x {
-    font-size: 4em;
+.bg-light {
+    background-color: var(--gagarjal-bg-light) !important;
 }
 
-/* Products Page Cards (will add in Step 8) */
-.card {
-    border: none;
+.text-primary { color: var(--gagarjal-dark-teal-blue) !important; }
+.btn-primary {
+    background-color: var(--gagarjal-dark-teal-blue);
+    border-color: var(--gagarjal-dark-teal-blue);
+    color: var(--gagarjal-white);
+}
+.btn-primary:hover {
+    background-color: #1a4d5e;
+    border-color: #1a4d5e;
+}
+.btn-secondary {
+    background-color: var(--gagarjal-orange-brown);
+    border-color: var(--gagarjal-orange-brown);
+    color: var(--gagarjal-white);
+}
+.btn-secondary:hover {
+    background-color: #d17e47;
+    border-color: #d17e47;
+}
+
+/* Icons */
+.fa-3x { font-size: 3em; }
+.fa-4x { font-size: 4em; }
+
+/* Commitment section icons */
+.commitment-icon {
+    color: var(--gagarjal-dark-teal-blue);
+}
+
+
+/* --- Products Page Custom Styling --- */
+.products-page-main {
+    /* Specific styling for the products page main area if needed, e.g. background */
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+    justify-content: center; /* Center cards in the grid */
+    gap: 30px; /* Consistent spacing between cards */
+    max-width: 1200px; /* Optional: limit width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Product Cards */
+.product-card {
+    background-color: var(--gagarjal-white);
     border-radius: 10px;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    width: calc(25% - 23px); /* 4 cards per row (100%/4), accounting for gap (3*gap/4) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push footer to bottom */
+    text-align: center;
+    overflow: hidden; /* Ensure rounded corners clip content */
+    min-height: 380px; /* Ensure consistent card height for image-based cards */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.product-card:hover {
+    transform: translateY(-8px); /* Lift higher on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    border-color: var(--gagarjal-dark-teal-blue); /* Optional: add border on hover */
 }
 
-.card-img-top {
-    height: 180px; /* Standardize image height */
-    object-fit: contain; /* Prevent stretching */
+.product-card .card-content {
+    padding: 20px; /* Generous padding inside card content */
+    flex-grow: 1; /* Allows content to expand and push title/description */
+    display: flex; /* Use flex to control internal spacing */
+    flex-direction: column;
+    justify-content: center; /* Center items vertically within content */
 }
 
-/* Contact Form (will add in Step 9) */
+/* Product Images */
+.product-image {
+    width: 100%; /* Image takes full width of card */
+    height: 180px; /* Consistent image height */
+    object-fit: contain; /* Ensure image is fully visible, letterboxing if necessary */
+    background-color: #f0f0f0; /* Light background for images if they have transparent parts */
+    padding: 10px; /* Padding inside the image area */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle separator */
+}
+
+/* Product Titles */
+.product-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Slightly bolder */
+    color: var(--gagarjal-dark-teal-blue); /* Darker color */
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+/* Product Descriptions */
+.product-description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Lighter font weight */
+    color: #666; /* Lighter color */
+    font-size: 0.95rem;
+    margin-bottom: 15px; /* Space below description */
+}
+
+/* Future Product Cards (Icons) */
+.product-card.future-product .product-icon {
+    font-size: 4em;
+    color: var(--gagarjal-orange-brown); /* Icons for future products are orange */
+    padding-top: 30px; /* Space from top of card */
+    padding-bottom: 20px;
+    height: 180px; /* Match image height for consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gagarjal-bg-light);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* Existing Badge Styling (for "Coming Soon" tags) */
+.badge-custom-accent {
+    background-color: var(--gagarjal-orange-brown) !important;
+    color: var(--gagarjal-white) !important;
+    font-weight: normal;
+    padding: 0.4em 0.8em;
+    border-radius: 0.375rem;
+    margin-top: 10px; /* Space above badge */
+    display: inline-block; /* Ensure padding works correctly */
+}
+
+
+/* Contact Form */
 #contactForm .form-control {
     border-radius: 5px;
     border-color: #ced4da;
 }
 
-/* Footer (already in HTML, but these are for social icons) */
+/* Footer */
 footer .social-icons a {
-    color: white;
+    color: var(--gagarjal-white);
     font-size: 1.5rem;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    color: #0d6efd; /* Hover effect for social icons */
+    color: var(--gagarjal-orange-brown);
+}
+
+/* Animations Section (for Background Video) */
+.animated-water-section {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gagarjal-white);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    background-color: var(--gagarjal-light-blue);
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(0.7) saturate(1.2);
+    object-fit: cover;
+}
+
+/* Glass animation - INITIAL STATE */
+.animated-glass-pop-up {
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(100px) scale(0.8);
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+    animation: none;
+}
+
+@keyframes glassPopUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Heading Fade In - INITIAL STATE */
+.animated-fade-in-late {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: none;
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Labels Fade In - INITIAL STATE */
+.labels-container p.lead {
+    font-size: 1.25rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: none;
+}
+
+@keyframes labelFadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Trigger Animations when 'is-in-view' class is added by JavaScript */
+.animated-water-section.is-in-view .animated-glass-pop-up {
+    animation: glassPopUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.animated-water-section.is-in-view .animated-fade-in-late {
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.animated-water-section.is-in-view .animated-fade-in-label-1 {
+    animation: labelFadeIn 0.8s ease-out forwards;
+    animation-delay: 2s;
+}
+.animated-water-section.is-in-view .animated-fade-in-label-2 {
+    animation: labelFadeIn 0.8s ease-out forwards;
+    animation-delay: 2.3s;
+}
+.animated-water-section.is-in-view .animated-fade-in-label-3 {
+    animation: labelFadeIn 0.8s ease-out forwards;
+    animation-delay: 2.6s;
+}
+
+/* Home Page - Why Choose Us Section & Founders Section heading/cards */
+.animated-fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animated-fade-in-on-scroll.is-in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply staggered delays for cards in 'Why Choose Us' section */
+.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(1) .animated-fade-in-on-scroll { transition-delay: 0.1s; }
+.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(2) .animated-fade-in-on-scroll { transition-delay: 0.2s; }
+.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(3) .animated-fade-in-on-scroll { transition-delay: 0.3s; }
+
+/* About Us Page - Founders Section */
+.founders-section {
+    background-color: var(--gagarjal-bg-light);
+}
+
+.founders-card {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founders-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.founder-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gagarjal-dark-teal-blue);
+}
+
+.founders-card .social-links a {
+    color: var(--gagarjal-dark-teal-blue);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.founders-card .social-links a:hover {
+    color: var(--gagarjal-orange-brown);
+}
+
+/* About Us Page - Background Enhancement (Parallax) */
+.about-main-content {
+    background-image: url('../img/bgimageforabout2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+.about-main-content h1,
+.about-main-content h2,
+.about-main-content p,
+.about-main-content ul,
+.about-main-content section,
+.about-main-content div.row,
+.about-main-content .card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Carousel Styles (for "Explore Our World") */
+.image-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.image-carousel .carousel-inner {
+    height: 400px;
+    transition: all 0.5s ease-in-out;
+}
+
+.image-carousel .carousel-item {
+    height: 100%;
+    
+    
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.image-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(30, 89, 109, 0.75);
+    color: var(--gagarjal-white);
+    padding: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    border-radius: 0 0 0.75rem 0.75rem;
+    width: 100%;
+}
+
+.image-text-overlay h5.h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--gagarjal-white);
+    margin-bottom: 0.75rem;
+}
+
+.image-text-overlay p.lead {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.image-carousel .btn-primary {
+    background-color: var(--gagarjal-orange-brown);
+    border-color: var(--gagarjal-orange-brown);
+}
+.image-carousel .btn-primary:hover {
+    background-color: #d17e47;
+    border-color: #d17e47;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background-image: none;
+}
+
+.carousel-control-prev-icon::before {
+    content: '\f053';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--gagarjal-white);
+}
+
+.carousel-control-next-icon::before {
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--gagarjal-white);
+}
+
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--gagarjal-white);
+    background-color: var(--gagarjal-dark-teal-blue);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: var(--gagarjal-orange-brown);
+    transform: scale(1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .hero-section h1 {
         font-size: 2.5rem;
     }
@@ -142,5 +590,92 @@ footer .social-icons a:hover {
     .navbar-nav .nav-link {
         margin-right: 0;
         text-align: center;
+    }
+
+    /* Responsive adjustments for animation section */
+    .animated-water-section {
+        height: auto;
+        padding: 40px 0;
+    }
+    .animation-elements {
+        flex-direction: column;
+    }
+    .glass-container {
+        margin-right: 0 !important;
+        margin-bottom: 30px !important;
+    }
+    .animated-glass-pop-up {
+        width: 120px;
+    }
+    .labels-container p.lead {
+        text-align: center;
+    }
+
+    /* Hide background video on very small devices or for data saving */
+    .background-video {
+        display: none;
+    }
+    .animated-water-section {
+        background-image: url('../img/flowing_water_fallback.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .animated-water-section .background-video {
+        filter: none;
+    }
+
+    /* Carousel adjustments for mobile */
+    .image-carousel .carousel-inner {
+        height: 300px;
+    }
+    .carousel-img {
+        height: 100%;
+        border-radius: 0;
+    }
+    .image-text-overlay {
+        position: static;
+        padding: 1rem;
+        margin-top: 0;
+        background-color: var(--gagarjal-dark-teal-blue);
+        border-radius: 0;
+    }
+    .image-text-overlay h5.h2 {
+        font-size: 1.8rem;
+    }
+    .image-text-overlay p.lead {
+        font-size: 1rem;
+    }
+    .image-carousel .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: 0.8;
+    }
+
+    /* Product Page responsive adjustments */
+    .product-grid {
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+    .product-card {
+        width: calc(50% - 10px); /* 2 cards per row on medium screens */
+        min-height: 350px;
+    }
+}
+
+/* Tablets (landscape) */
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .product-card {
+        width: calc(33.333% - 20px); /* 3 cards per row */
+    }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+    .product-card {
+        width: 100%; /* 1 card per row on very small screens */
+        min-height: auto; /* Allow height to adjust */
     }
 }

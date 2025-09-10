@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Gagarjal Corporation Pvt. Ltd.</title>
+    <!-- Google Fonts: Poppins (for body) and Montserrat (for headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome for Icons -->
@@ -12,143 +14,121 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
     <header>
-           <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/img/waterlogo1.png" alt="Gagarjal Logo" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link " href="products.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="updates.html">Future Updates</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/waterlogo1-removebg-preview.png" alt="Gagarjal Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="updates.html">Future Updates</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="funding.html">Investors</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div class="container my-5">
-    <h1 class="text-center mb-5">Our Product Portfolio</h1>
+    <main class="products-page-main">
+        <div class="main-content-wrapper container my-5">
+            <h1 class="text-center mb-5">Our Product Portfolio</h1>
 
-    <section class="mb-5">
-        <h2 class="text-primary mb-4">Current Offerings: Pure Packaged Drinking Water</h2>
-        <p class="lead text-center">Refreshing hydration in every size, crafted for your convenience.</p>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
-            <div class="col">
-                <div class="card h-100 text-center shadow-sm">
-                    <!-- Placeholder image - add real images to assets/img/ later -->
-                    <img src="assets/img/waterbottle1.jpg" class="card-img-top mx-auto mt-3" alt="1 Liter Bottle" style="max-width: 150px;">
-                    <div class="card-body">
-                        <h5 class="card-title">1 Liter Bottle</h5>
-                        <p class="card-text">Perfect for daily hydration at home or on the go.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/waterbottle2.jpg" class="card-img-top mx-auto mt-3" alt="500ml Bottle" style="max-width: 150px;">
-                    <div class="card-body">
-                        <h5 class="card-title">500ml Bottle</h5>
-                        <p class="card-text">Ideal for single servings and school lunches.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/waterbottle3.jpg" class="card-img-top mx-auto mt-3" alt="250ml Bottle" style="max-width: 150px;">
-                    <div class="card-body">
-                        <h5 class="card-title">250ml Bottle</h5>
-                        <p class="card-text">Compact size for quick refreshment anytime, anywhere.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/waterbottle4.jpg" class="card-img-top mx-auto mt-3" alt="200ml Bottle" style="max-width: 150px;">
-                    <div class="card-body">
-                        <h5 class="card-title">200ml Bottle</h5>
-                        <p class="card-text">Perfect for events and small serving needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <section class="products-section mb-5">
+                <h2 class="text-primary mb-4 text-center">Current Offerings: Pure Packaged Drinking Water</h2>
+                <p class="lead text-center mb-5">Refreshing hydration in every size, crafted for your convenience.</p>
 
-    <section class="mb-5">
-        <h2 class="text-primary mb-4">Innovations Coming Soon: Future Beverages</h2>
-        <p class="lead text-center">Expanding our portfolio with healthy, functional, and flavorful drinks.</p>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
-            <div class="col">
-                <div class="card h-100 text-center bg-light shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-lemon fa-4x text-info mb-3"></i>
-                        <h5 class="card-title">Flavored Water</h5>
-                        <p class="card-text">Naturally infused water with delicious fruit flavors.</p>
+                <div class="product-grid animated-fade-in-on-scroll">
+                    <div class="product-card">
+                        <img src="assets/img/product1.png" class="product-image" alt="1 Liter Bottle">
+                        <div class="card-content">
+                            <h5 class="product-title">1 Litre Bottle</h5>
+                            <p class="product-description">Perfect for daily hydration at home or on the go.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/img/product2.png" class="product-image" alt="500ml Bottle">
+                        <div class="card-content">
+                            <h5 class="product-title">500ml Bottle</h5>
+                            <p class="product-description">Ideal for single servings and school lunches.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/img/product3new.png" class="product-image" alt="250ml Bottle">
+                        <div class="card-content">
+                            <h5 class="product-title">250ml Bottle</h5>
+                            <p class="product-description">Compact size for quick refreshment anytime, anywhere.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/img/product4.png" class="product-image" alt="200ml Bottle">
+                        <div class="card-content">
+                            <h5 class="product-title">200ml Bottle</h5>
+                            <p class="product-description">Perfect for events and small serving needs.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center bg-light shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-leaf fa-4x text-success mb-3"></i>
-                        <h5 class="card-title">Tulsi Water</h5>
-                        <p class="card-text">Embracing traditional goodness for health benefits.</p>
+            </section>
+
+            <section class="products-section mb-5">
+                <h2 class="text-primary mb-4 text-center">Innovations Coming Soon: Future Beverages</h2>
+                <p class="lead text-center mb-5">Expanding our portfolio with healthy, functional, and flavorful drinks.</p>
+
+                <div class="product-grid animated-fade-in-on-scroll">
+                    <div class="product-card future-product">
+                        <i class="fas fa-lemon fa-4x mb-3 product-icon"></i>
+                        <div class="card-content">
+                            <h5 class="product-title">Flavored Water</h5>
+                            <p class="product-description">Naturally infused water with delicious fruit flavors.</p>
+                            <span class="badge badge-custom-accent">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="product-card future-product">
+                        <i class="fas fa-leaf fa-4x mb-3 product-icon"></i>
+                        <div class="card-content">
+                            <h5 class="product-title">Tulsi Water</h5>
+                            <p class="product-description">Embracing traditional goodness for health benefits.</p>
+                            <span class="badge badge-custom-accent">In Development</span>
+                        </div>
+                    </div>
+                    <div class="product-card future-product">
+                        <i class="fas fa-seedling fa-4x mb-3 product-icon"></i>
+                        <div class="card-content">
+                            <h5 class="product-title">Jeera Water</h5>
+                            <p class="product-description">Refreshing digestive water, a traditional Indian favorite.</p>
+                            <span class="badge badge-custom-accent">In Development</span>
+                        </div>
+                    </div>
+                    <div class="product-card future-product">
+                        <i class="fas fa-wine-glass fa-4x mb-3 product-icon"></i>
+                        <div class="card-content">
+                            <h5 class="product-title">Soda</h5>
+                            <p class="product-description">Classic fizzy refreshment for a joyful experience.</p>
+                            <span class="badge badge-custom-accent">Coming Soon</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center bg-light shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-seedling fa-4x text-success mb-3"></i>
-                        <h5 class="card-title">Jeera Water</h5>
-                        <p class="card-text">Refreshing digestive water, a traditional Indian favorite.</p>
-                    </div>
-                </div>
-            </div>
-             <div class="col">
-                <div class="card h-100 text-center bg-light shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-wine-glass fa-4x text-secondary mb-3"></i>
-                        <h5 class="card-title">Soda</h5>
-                        <p class="card-text">Classic fizzy refreshment for a joyful experience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 text-center bg-light shadow-sm">
-                    <div class="card-body">
-                        <i class="fas fa-blender-phone fa-4x text-warning mb-3"></i>
-                        <h5 class="card-title">Other Functional Beverages</h5>
-                        <p class="card-text">Exploring new categories for health-conscious consumers.</p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-</div>
     </main>
 
     <footer class="bg-dark text-white py-4 mt-5">
-
-    <div class="container text-center">
-        <p>&copy; 2025 Gagarjal Corporation Pvt. Ltd. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        <div class="container text-center">
+            <p>&copy; 2025 Gagarjal Corporation Pvt. Ltd. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-    </div>
-    
-</footer>
+    </footer>
 
     <!-- Bootstrap JavaScript (Popper.js included) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
