@@ -8,28 +8,26 @@
     --gagarjal-white: #FFFFFF;
 }
 
-/* Global Page Styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Set Poppins as primary font */
-    font-weight: 300; /* Lighter weight for body text */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     line-height: 1.6;
     color: var(--gagarjal-text-dark);
-    background-color: var(--gagarjal-bg-light); /* Very light gray background */
+    background-color: var(--gagarjal-bg-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
-    font-weight: 700; /* Bolder headings */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: var(--gagarjal-dark-teal-blue);
 }
 
 .main-content-wrapper {
-    max-width: 1200px; /* Max width for main content container */
-    margin: 50px auto; /* Generous top/bottom margin, horizontally centered */
-    padding: 0 15px; /* Prevent content from touching edges on small screens */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 15px;
 }
 
-/* Header & Navigation */
 .navbar-brand img {
     height: 60px;
     max-width: 200px;
@@ -48,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--gagarjal-orange-brown) !important;
 }
 
-/* Hero Section (Home Page) */
 .hero-section {
     background: linear-gradient(rgba(30, 89, 109, 0.4), rgba(30, 89, 109, 0.4)), url('../img/bgimg.png') no-repeat center center/cover;
     min-height: 60vh;
@@ -97,7 +94,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
-/* Section Styles */
 section {
     padding: 60px 0;
 }
@@ -126,95 +122,85 @@ section {
     border-color: #d17e47;
 }
 
-/* Icons */
 .fa-3x { font-size: 3em; }
 .fa-4x { font-size: 4em; }
 
-/* Commitment section icons */
 .commitment-icon {
     color: var(--gagarjal-dark-teal-blue);
 }
 
 
-/* --- Products Page Custom Styling --- */
 .products-page-main {
-    /* Specific styling for the products page main area if needed, e.g. background */
 }
 
-/* Product Grid */
 .product-grid {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to next line */
-    justify-content: center; /* Center cards in the grid */
-    gap: 30px; /* Consistent spacing between cards */
-    max-width: 1200px; /* Optional: limit width of the grid */
-    margin: 0 auto; /* Center the grid */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Product Cards */
 .product-card {
     background-color: var(--gagarjal-white);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft floating effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    width: calc(25% - 23px); /* 4 cards per row (100%/4), accounting for gap (3*gap/4) */
+    width: calc(25% - 23px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Push footer to bottom */
+    justify-content: space-between;
     text-align: center;
-    overflow: hidden; /* Ensure rounded corners clip content */
-    min-height: 380px; /* Ensure consistent card height for image-based cards */
+    overflow: hidden;
+    min-height: 380px;
 }
 
 .product-card:hover {
-    transform: translateY(-8px); /* Lift higher on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
-    border-color: var(--gagarjal-dark-teal-blue); /* Optional: add border on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--gagarjal-dark-teal-blue);
 }
 
 .product-card .card-content {
-    padding: 20px; /* Generous padding inside card content */
-    flex-grow: 1; /* Allows content to expand and push title/description */
-    display: flex; /* Use flex to control internal spacing */
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically within content */
+    justify-content: center;
 }
 
-/* Product Images */
 .product-image {
-    width: 100%; /* Image takes full width of card */
-    height: 180px; /* Consistent image height */
-    object-fit: contain; /* Ensure image is fully visible, letterboxing if necessary */
-    background-color: #f0f0f0; /* Light background for images if they have transparent parts */
-    padding: 10px; /* Padding inside the image area */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle separator */
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Product Titles */
 .product-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500; /* Slightly bolder */
-    color: var(--gagarjal-dark-teal-blue); /* Darker color */
+    font-weight: 500;
+    color: var(--gagarjal-dark-teal-blue);
     margin-bottom: 10px;
     font-size: 1.25rem;
 }
 
-/* Product Descriptions */
 .product-description {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400; /* Lighter font weight */
-    color: #666; /* Lighter color */
+    font-weight: 400;
+    color: #666;
     font-size: 0.95rem;
-    margin-bottom: 15px; /* Space below description */
+    margin-bottom: 15px;
 }
 
-/* Future Product Cards (Icons) */
 .product-card.future-product .product-icon {
     font-size: 4em;
-    color: var(--gagarjal-orange-brown); /* Icons for future products are orange */
-    padding-top: 30px; /* Space from top of card */
+    color: var(--gagarjal-orange-brown);
+    padding-top: 30px;
     padding-bottom: 20px;
-    height: 180px; /* Match image height for consistency */
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,25 +209,22 @@ section {
 }
 
 
-/* Existing Badge Styling (for "Coming Soon" tags) */
 .badge-custom-accent {
     background-color: var(--gagarjal-orange-brown) !important;
     color: var(--gagarjal-white) !important;
     font-weight: normal;
     padding: 0.4em 0.8em;
     border-radius: 0.375rem;
-    margin-top: 10px; /* Space above badge */
-    display: inline-block; /* Ensure padding works correctly */
+    margin-top: 10px;
+    display: inline-block;
 }
 
 
-/* Contact Form */
 #contactForm .form-control {
     border-radius: 5px;
     border-color: #ced4da;
 }
 
-/* Footer */
 footer .social-icons a {
     color: var(--gagarjal-white);
     font-size: 1.5rem;
@@ -253,7 +236,6 @@ footer .social-icons a:hover {
     color: var(--gagarjal-orange-brown);
 }
 
-/* Animations Section (for Background Video) */
 .animated-water-section {
     position: relative;
     overflow: hidden;
@@ -280,7 +262,6 @@ footer .social-icons a:hover {
     object-fit: cover;
 }
 
-/* Glass animation - INITIAL STATE */
 .animated-glass-pop-up {
     width: 150px;
     height: auto;
@@ -305,7 +286,6 @@ footer .social-icons a:hover {
     }
 }
 
-/* Heading Fade In - INITIAL STATE */
 .animated-fade-in-late {
     opacity: 0;
     transform: translateY(20px);
@@ -319,7 +299,6 @@ footer .social-icons a:hover {
     }
 }
 
-/* Labels Fade In - INITIAL STATE */
 .labels-container p.lead {
     font-size: 1.25rem;
     opacity: 0;
@@ -334,7 +313,6 @@ footer .social-icons a:hover {
     }
 }
 
-/* Trigger Animations when 'is-in-view' class is added by JavaScript */
 .animated-water-section.is-in-view .animated-glass-pop-up {
     animation: glassPopUp 1.5s ease-out forwards;
     animation-delay: 1s;
@@ -358,7 +336,6 @@ footer .social-icons a:hover {
     animation-delay: 2.6s;
 }
 
-/* Home Page - Why Choose Us Section & Founders Section heading/cards */
 .animated-fade-in-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -369,12 +346,10 @@ footer .social-icons a:hover {
     transform: translateY(0);
 }
 
-/* Apply staggered delays for cards in 'Why Choose Us' section */
 .row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(1) .animated-fade-in-on-scroll { transition-delay: 0.1s; }
 .row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(2) .animated-fade-in-on-scroll { transition-delay: 0.2s; }
 .row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(3) .animated-fade-in-on-scroll { transition-delay: 0.3s; }
 
-/* About Us Page - Founders Section */
 .founders-section {
     background-color: var(--gagarjal-bg-light);
 }
@@ -408,7 +383,6 @@ footer .social-icons a:hover {
     color: var(--gagarjal-orange-brown);
 }
 
-/* About Us Page - Background Enhancement (Parallax) */
 .about-main-content {
     background-image: url('../img/bgimageforabout2.png');
     background-repeat: no-repeat;
@@ -442,7 +416,6 @@ footer .social-icons a:hover {
     z-index: 1;
 }
 
-/* Carousel Styles (for "Explore Our World") */
 .image-carousel {
     max-width: 900px;
     margin: 0 auto;
@@ -458,8 +431,8 @@ footer .social-icons a:hover {
 
 .image-carousel .carousel-item {
     height: 100%;
-    
-    
+
+
 }
 
 .carousel-img {
@@ -539,7 +512,6 @@ footer .social-icons a:hover {
     color: var(--gagarjal-white);
 }
 
-/* Back to Top Button Styles */
 .back-to-top {
     position: fixed;
     right: 20px;
@@ -575,7 +547,6 @@ footer .social-icons a:hover {
     transform: scale(1);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 767.98px) {
     .hero-section h1 {
         font-size: 2.5rem;
@@ -592,7 +563,6 @@ footer .social-icons a:hover {
         text-align: center;
     }
 
-    /* Responsive adjustments for animation section */
     .animated-water-section {
         height: auto;
         padding: 40px 0;
@@ -611,7 +581,6 @@ footer .social-icons a:hover {
         text-align: center;
     }
 
-    /* Hide background video on very small devices or for data saving */
     .background-video {
         display: none;
     }
@@ -625,7 +594,6 @@ footer .social-icons a:hover {
         filter: none;
     }
 
-    /* Carousel adjustments for mobile */
     .image-carousel .carousel-inner {
         height: 300px;
     }
@@ -655,27 +623,24 @@ footer .social-icons a:hover {
         opacity: 0.8;
     }
 
-    /* Product Page responsive adjustments */
     .product-grid {
-        gap: 20px; /* Adjust gap for smaller screens */
+        gap: 20px;
     }
     .product-card {
-        width: calc(50% - 10px); /* 2 cards per row on medium screens */
+        width: calc(50% - 10px);
         min-height: 350px;
     }
 }
 
-/* Tablets (landscape) */
 @media (max-width: 991.98px) and (min-width: 768px) {
     .product-card {
-        width: calc(33.333% - 20px); /* 3 cards per row */
+        width: calc(33.333% - 20px);
     }
 }
 
-/* Extra small devices (phones) */
 @media (max-width: 575.98px) {
     .product-card {
-        width: 100%; /* 1 card per row on very small screens */
-        min-height: auto; /* Allow height to adjust */
+        width: 100%;
+        min-height: auto;
     }
 }
