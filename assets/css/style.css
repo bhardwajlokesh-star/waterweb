@@ -345,9 +345,9 @@ footer .social-icons a:hover {
     transform: translateY(0);
 }
 
-.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(1) .animated-fade-in-on-scroll { transition-delay: 0.1s; }
-.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(2) .animated-fade-in-on-scroll { transition-delay: 0.2s; }
-.row.row-cols-1.row-cols-md-3.g-4 .col:nth-child(3) .animated-fade-in-on-scroll { transition-delay: 0.3s; }
+.row.align-items-center.justify-content-center > .col-lg-6.order-md-1 .col:nth-child(1) .animated-fade-in-on-scroll { transition-delay: 0.1s; }
+.row.align-items-center.justify-content-center > .col-lg-6.order-md-1 .col:nth-child(2) .animated-fade-in-on-scroll { transition-delay: 0.2s; }
+.row.align-items-center.justify-content-center > .col-lg-6.order-md-1 .col:nth-child(3) .animated-fade-in-on-scroll { transition-delay: 0.3s; }
 
 .founders-section {
     background-color: var(--gagarjal-bg-light);
@@ -556,6 +556,7 @@ footer .social-icons a:hover {
     .hero-section .btn {
         font-size: 1rem;
         padding: 8px 20px;
+        margin: 5px;
     }
     .navbar-nav .nav-link {
         margin-right: 0;
@@ -642,4 +643,12 @@ footer .social-icons a:hover {
         width: 100%;
         min-height: auto;
     }
+}
+
+
+
+
+
+.why-choose-img {
+   
 }
