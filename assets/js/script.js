@@ -1,16 +1,13 @@
-
-
-console.log("Gagarjal Website custom scripts loaded!");
-
 document.addEventListener('DOMContentLoaded', function() {
 
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', async function(event) {
             event.preventDefault();
-            formStatus.innerHTML = '';
+
+            formStatus.innerHTML = '<div class="alert alert-info" role="alert">Sending your message...</div>';
 
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -18,24 +15,34 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = document.getElementById('message').value.trim();
 
             if (!name || !email || !subject || !message) {
-                formStatus.innerHTML = '<div class="alert alert-danger" role="alert">Please fill in all fields.</div>';
+                formStatus.innerHTML = '<div class="alert alert-danger" role="alert">All fields are required.</div>';
                 return;
             }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                formStatus.innerHTML = '<div class="alert alert-danger" role="alert">Please enter a valid email address.</div>';
+                formStatus.innerHTML = '<div class="alert alert-danger" role="alert">Invalid email format.</div>';
                 return;
             }
 
-            formStatus.innerHTML = '<div class="alert alert-info" role="alert">Sending your message...</div>';
-            setTimeout(() => {
-                const success = true;
-                if (success) {
-                    formStatus.innerHTML = '<div class="alert alert-success" role="alert">Thank you for your message! We will get back to you soon.</div>';
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch('send_email.php', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.status === "success") {
+                    formStatus.innerHTML = `<div class="alert alert-success" role="alert">${data.message}</div>`;
                     contactForm.reset();
                 } else {
-                    formStatus.innerHTML = '<div class="alert alert-danger" role="alert">There was an error sending your message. Please try again.</div>';
+                    formStatus.innerHTML = `<div class="alert alert-danger" role="alert">Error: ${data.message || 'Failed to send message.'}</div>`;
                 }
-            }, 2000);
+            } catch (error) {
+                console.error('Network or PHP submission error:', error);
+                formStatus.innerHTML = '<div class="alert alert-danger" role="alert">A network error occurred. Please try again later.</div>';
+            }
         });
     }
 
@@ -48,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
             wrap: true
         });
         console.log("Product Carousel initialized:", productCarousel);
-
         productCarousel.cycle();
 
         productCarouselElement.addEventListener('slide.bs.carousel', function() {
@@ -58,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Carousel has finished sliding to next item!');
         });
     }
-
 
     const animateOnScrollElements = document.querySelectorAll('.animated-fade-in-on-scroll, .animated-water-section');
 

@@ -41,8 +41,8 @@
             <h2 class="text-primary mb-3">Our Office</h2>
             <p><strong>Registered Office Address:</strong></p>
             <p>C/o Gindor The Mafi, Po Umri,<br>Moradabad, Uttar Pradesh,<br>India – 244001</p>
-            <p class="mt-4"><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91 1234567890</a> </p>
-            <p><strong>Email:</strong> <a href="mailto:info@gagarjal.com">info@gagarjal.com</a></p>
+            <p class="mt-4"><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91 75007 13009</a> </p>
+            <p><strong>Email:</strong> <a href="mailto:gaagarjalwater@gmail.com">gaagarjalwater@gmail.com</a></p>
 
             <div class="mt-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14000.00000!2d78.7735!3d28.8407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908c62c2f21136b%3A0x7d6a5c2d3e1d1f1e!2sMoradabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1678881234567" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -50,40 +50,39 @@
             </div>
         </div>
         <div class="col-md-6 mb-4">
-            <h2 class="text-primary mb-3">Send Us a Message</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="subject" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-                <div id="formStatus" class="mt-3"></div>
-            </form>
+    <h2 class="text-primary mb-3">Send Us a Message</h2>
+    <form id="contactForm" action="send_email.php" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <div id="formStatus" class="mt-3"></div> 
+    </form>
+</div>
     </div>
 </div>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
+   <footer class="bg-dark text-white py-4 mt-5">
 
     <div class="container text-center">
         <p>&copy; 2025 Gagarjal Corporation Pvt. Ltd. All Rights Reserved.</p>
         <div class="social-icons">
-            <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            <a href="gaagarjalwater@gmail.com" class="text-white me-2"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/gaagarjal?igsh=MWFjaDcycHlkNnc0cg==" class="text-white"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
     

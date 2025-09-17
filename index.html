@@ -71,8 +71,42 @@
 
                 <div class="row align-items-center justify-content-center g-5">
                     <div class="col-lg-6 col-md-10 order-md-2 order-lg-1 animated-fade-in-on-scroll">
-                        <img src="assets/img/whychoose.jpg" class="img-fluid rounded shadow-lg why-choose-img" alt="Gagarjal Quality">
+                <div id="whyChooseCarousel" class="carousel slide why-choose-carousel" data-bs-ride="carousel" data-bs-interval="4000" data-bs-touch="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#whyChooseCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#whyChooseCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#whyChooseCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/whychoose.jpg" class="d-block w-100 carousel-img" alt="Gagarjal Quality Standards">
+                            <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded py-1">
+                                <p class="mb-0 small"></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gagarjalwhychoose2.jpg" class="d-block w-100 carousel-img" alt="Advanced Filtration System">
+                            <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded py-1">
+                                <p class="mb-0 small">State-of-the-art purification</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gagarjalwhychoose3.jpg" class="d-block w-100 carousel-img" alt="Pure Water Source">
+                            <div class="carousel-caption d-none d-md-block bg-dark-transparent rounded py-1">
+                                <p class="mb-0 small">Sourced from the purest depths</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#whyChooseCarousel" data-bs-slide="prev" tabindex="0">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#whyChooseCarousel" data-bs-slide="next" tabindex="0">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
                     <div class="col-lg-6 col-md-10 order-md-1 order-lg-2">
                         <div class="row row-cols-1 g-4">
                             <div class="col">
@@ -109,28 +143,33 @@
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> 
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="assets/img/product1.png" class="d-block w-100 carousel-img" alt="Our Pure Water Range">
+                            <img src="assets/img/bgimageforabout.png" class="d-block w-100 carousel-img" alt="Our Pure Water Range">
                             <div class="carousel-caption d-block image-text-overlay">
-                                <h5 class="h2">Experience Unmatched Purity</h5>
+                                <h5 class="h2">Quench The Thirst</h5>
                                 <p class="lead">Our pristine water, available in convenient sizes, for your daily hydration.</p>
                                 <a href="products.html" class="btn btn-primary mt-3">View All Products</a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/img/product2.png" class="d-block w-100 carousel-img" alt="Upcoming Flavored Water">
+                            <img src="assets/img/product6girl.png" class="d-block w-100 carousel-img" alt="Upcoming Flavored Water">
                             <div class="carousel-caption d-block image-text-overlay">
-                                <h5 class="h2">Soon: Refreshing Flavored Water!</h5>
-                                <p class="lead">Naturally infused, health-conscious choices coming your way, bursting with flavor.</p>
-                                <a href="updates.html" class="btn btn-primary mt-3">See Future Updates</a>
+                                <h5 class="h2">Pure Hydration, Simple Taste.</h5>
+                                <p class="lead">Experience the clean, crisp taste of our trusted quality water. The perfect choice for pure refreshment.</p>
+                                <a href="products.html" class="btn btn-primary mt-3"> Discover Our Water</a>
                             </div>
                         </div>
-
-
-                       
-                        
+                        <div class="carousel-item"> 
+                            <img src="assets/img/product5.png" class="d-block w-100 carousel-img" alt="Refreshing Soda">
+                            <div class="carousel-caption d-block image-text-overlay">
+                                <h5 class="h2">Experience Unmatched Purity</h5>
+                                <p class="lead"> Gagarjal provides pure, clean hydration sourced from our trusted spring, so you can feel good with every sip.</p>
+                                <a href="products.html" class="btn btn-primary mt-3">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev" tabindex="0">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -153,16 +192,17 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2025 Gagarjal Corporation Pvt. Ltd. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-            </div>
+   <footer class="bg-dark text-white py-4 mt-5">
+
+    <div class="container text-center">
+        <p>&copy; 2025 Gagarjal Corporation Pvt. Ltd. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="gaagarjalwater@gmail.com" class="text-white me-2"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.instagram.com/gaagarjal?igsh=MWFjaDcycHlkNnc0cg==" class="text-white"><i class="fab fa-instagram"></i></a>
         </div>
-    </footer>
+    </div>
+    
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
